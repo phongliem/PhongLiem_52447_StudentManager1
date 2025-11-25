@@ -82,7 +82,10 @@
 
         private void search_Click(object sender, EventArgs e)
         {
-
+            string keyword = txtname.Text.ToLower();
+            var result = students.FindAll(s => s.Name.ToLower().Contains(keyword));
+            board.DataSource = null;
+            board.DataSource = result;
         }
     }
 }
