@@ -87,5 +87,15 @@
             board.DataSource = null;
             board.DataSource = result;
         }
+
+        private void board_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtname.Text = board.Rows[e.RowIndex].Cells[0].Value.ToString();
+                gender.Text = board.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtlop.Text = board.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+        }
     }
 }
