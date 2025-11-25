@@ -160,12 +160,10 @@
             splitContainer1.Panel1.Controls.Add(label3);
             splitContainer1.Panel1.Controls.Add(txtname);
             splitContainer1.Panel1.Controls.Add(label1);
-            
             // 
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(board);
-            
             splitContainer1.Size = new Size(854, 483);
             splitContainer1.SplitterDistance = 304;
             splitContainer1.SplitterWidth = 5;
@@ -200,6 +198,7 @@
             board.RowHeadersWidth = 51;
             board.Size = new Size(606, 581);
             board.TabIndex = 0;
+            board.CellClick += board_CellClick;
             // 
             // Form1
             // 
